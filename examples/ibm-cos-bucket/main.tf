@@ -12,14 +12,14 @@ resource "ibm_resource_instance" "activity_tracker" {
   name              = "activity_tracker"
   resource_group_id = data.ibm_resource_group.cos_group.id
   service           = "logdnaat"
-  plan              = "lite"
+  plan              = "7 day Event Search"
   location          = "us-south"
 }
 resource "ibm_resource_instance" "metrics_monitor" {
   name              = "metrics_monitor"
   resource_group_id = data.ibm_resource_group.cos_group.id
   service           = "sysdig-monitor"
-  plan              = "lite"
+  plan              = "Graduated Tier"
   location          = "us-south"
 }
 resource "ibm_cos_bucket" "standard-ams03" {
