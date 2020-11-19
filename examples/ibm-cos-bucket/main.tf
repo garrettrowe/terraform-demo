@@ -44,10 +44,4 @@ resource "ibm_cos_bucket" "archive_rule_cos" {
   resource_instance_id = ibm_resource_instance.cos_instance.id
   region_location      = var.regional_loc
   storage_class        = var.storage
-  archive_rule { 
-      rule_id = var.archive_ruleid
-      enable = true
-      days = var.archive_days
-      type = var.archive_types
-  }
 } 
